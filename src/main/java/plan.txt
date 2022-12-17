@@ -1,0 +1,40 @@
+plan:
+
+1)  zmienne part1, part2, result, temp, wholeText, tempResult
+    po kliknieciu przyciksku +,-,/ temp przypisywane jest do pierwszej zmiennej, czyszczone i znowu wypełniane.
+    IDEA: ewentulanie zmienne part1,part2 można zas
+2) po kliknieciu C - kasuję zmienną do której było obecnie zapisywane/ czysci temp
+3) po kliknieciu CE - kasuje temp, part1, part2, result, wholeText
+5) po kliknięciu +,-,/ - wykonuje operację i zapisuje jej wynik do tempResult
+4) po kliknieciu = - dopisuje "=" do wholeText, result = tempResult, dopisuje result do wholeText.
+
+
+OERACJA +
+tempResult = part1+part2
+
+OPERACJA -
+tempResult = part1.replaceAll(temp2,"")      <- do sprawdzenia
+
+OPERACJA /
+
+
+Zad 2)
+- wykorzystać mouse event
+- get(clikCount()) - do sprawdzania ilości klinięci danego klawisza (przy wyborze literek)
+- ^ co gdy ktoś kliknie więcej razy? Np. modulo ilość literek pod klawiszem, literki wybierane switchem
+
+
+TODO:
+- wybór liter
+- wszystkie przyciski liter maja tego samego event Listenera
+
+
+
+ public void actionPerformed(ActionEvent evt) {
+    Object src = evt.getSource();
+    if (src == button1) {
+      ... perform action for button 1
+    } else if (src == button2) {
+      ... perform action for button 2
+    }
+  }
