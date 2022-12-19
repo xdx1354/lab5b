@@ -119,15 +119,15 @@ public class MyWindow  {
          }
 
 
-        System.out.println("max len: " + maxLength);
-        System.out.println("iPos: " + str1[iPos]);
+        //System.out.println("max len: " + maxLength);
+        //System.out.println("iPos: " + str1[iPos]);
 
         for (int k=0; k<maxLength; k++){
-            System.out.println("iPos: " + str1[iPos-k]);
+            //System.out.println("iPos: " + str1[iPos-k]);
             longestCommon =str1[iPos-k]+longestCommon;
         }
 
-        System.out.println(Arrays.deepToString(tab));
+        //System.out.println(Arrays.deepToString(tab));
         return  longestCommon;
     }       //divideStrings
 
@@ -155,12 +155,9 @@ public class MyWindow  {
                 switch (operationSign){
                     case "+":{
                         result = part1 + part2;
-                        System.out.println(result);
                         break;
                     }
                     case "/":{
-                        System.out.println(part1);
-                        System.out.println(part2);
                         result = commonPart(part1.toCharArray(), part2.toCharArray());
                         if(result.isEmpty()){
                             JOptionPane.showMessageDialog(null, "Brak wspolnej czesci");
@@ -180,7 +177,7 @@ public class MyWindow  {
                 temp = "";
             }
             catch (Exception exception){
-                JOptionPane.showMessageDialog(null, "Brak elementu do usuniecia");
+                JOptionPane.showMessageDialog(null, "Bledna składnia zapisanego rownania");
             }
         }
     }
@@ -188,6 +185,7 @@ public class MyWindow  {
     class addPressed extends MouseAdapter {
         @Override
         public void mouseClicked(MouseEvent e) {
+
             try{
 
                 part1 = temp;
@@ -263,6 +261,7 @@ public class MyWindow  {
             try{
                 temp = "";
                 wholeText = "";
+                operationSign="";
                 txtLabel.setText(wholeText + temp);
             }
             catch (Exception exception){
@@ -283,7 +282,7 @@ public class MyWindow  {
                     break;
                 }
             }
-            System.out.println(e.getClickCount());
+            //System.out.println(e.getClickCount());
             switch (id) {
                 case 0 -> {                                     //abcButton
 
